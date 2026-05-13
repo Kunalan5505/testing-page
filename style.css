@@ -3270,3 +3270,36 @@ body {
   }
 }
 
+/* Mobile project slider arrows fix */
+@media (max-width: 768px) {
+  .premium-slider-wrap {
+    overflow: visible;
+    padding-bottom: 70px;
+  }
+
+  .premium-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: auto;
+    bottom: 10px;
+    transform: none;
+    z-index: 20;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+  }
+
+  .premium-arrow:hover {
+    transform: none;
+  }
+
+  .premium-arrow.left {
+    left: calc(50% - 60px);
+  }
+
+  .premium-arrow.right {
+    right: calc(50% - 60px);
+  }
+}
+
