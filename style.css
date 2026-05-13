@@ -3295,11 +3295,11 @@ body {
   }
 
   .premium-arrow.left {
-    left: calc(50% - 60px);
+    left: calc(50% - 70px);
   }
 
   .premium-arrow.right {
-    right: calc(50% - 60px);
+    right: calc(50% - 70px);
   }
 }
 
