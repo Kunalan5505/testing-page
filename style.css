@@ -3232,54 +3232,53 @@ body {
 
 
 /* =========================
-   MOBILE PROJECT SLIDER ARROWS
+   MOBILE SLIDER DOTS
 ========================= */
+
+.slider-dots {
+  display: none;
+}
 
 @media (max-width: 768px) {
 
-  .premium-slider-wrap {
-    position: relative;
-    overflow: visible;
-    padding-bottom: 110px;
+  .premium-arrow {
+    display: none !important;
   }
 
-  .premium-arrow {
-    display: flex !important;
-    align-items: center;
+  .slider-dots {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 26px;
+  }
 
-    position: absolute;
-    top: auto;
-    bottom: 20px;
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
 
-    width: 52px;
-    height: 52px;
+    background: rgba(255,255,255,0.22);
 
-    z-index: 999;
+    transition:
+      width 0.35s ease,
+      background 0.35s ease,
+      transform 0.35s ease;
+  }
 
-    background: rgba(8,18,32,0.95);
-    border: 2px solid rgba(121,216,255,0.55);
-    border-radius: 50%;
+  .slider-dot.active {
+    width: 34px;
 
-    color: #fff;
-    font-size: 2rem;
-    line-height: 1;
+    background: linear-gradient(
+      135deg,
+      #9cecff,
+      #8092ff
+    );
 
     box-shadow:
-      0 10px 30px rgba(0,0,0,0.35),
-      0 0 20px rgba(121,216,255,0.18);
-  }
+      0 0 14px rgba(121,216,255,0.45);
 
-  .premium-arrow.left {
-    left: calc(50% - 70px);
-  }
-
-  .premium-arrow.right {
-    right: calc(50% - 70px);
-  }
-
-  .premium-arrow:hover {
-    transform: none;
+    transform: scale(1.02);
   }
 }
 
